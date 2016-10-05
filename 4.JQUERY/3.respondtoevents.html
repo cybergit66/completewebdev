@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+/*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+/*                height: 200px;*/
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+/*                height: 200px;*/
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook is <span id="great">great</span></p>
+            <p class="orange">Paragraph 2</p>
+            <p>Paragraph 3</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple</p>
+            <ul>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>BMW</li>
+            </ul>
+            <p><a href="http://www.google.com">This is a link</a></p>
+            <p><a href="http://www.microsoft.com">This is another link</a></p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft</p>
+            <ul>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>BMW</li>
+            </ul>
+            <table>
+                <tr><th>Phone </th><th>Make</th><th>Model</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+            </table>
+        </div>
+        <p>Type our Name: <input type="text" id="input"><button id="submit" type="submit">Submit</button></p>
+        <script>
+            $(function(){
+              $("p").click(function(){
+                    // set all "p" elements to background-color #c590d4 when any "p" element is clicked
+//                    $("p").css("background-color","#c590d4");
+                    // change only the paragraph we click
+//                    $(this).css("background-color","#c590d4");
+                  
+                  // change paragraphs when a hover event occurs
+                });
+                $("p").mouseover(function(){
+                      $(this).css("background-color","#c590d4");
+                  });
+                
+                // change paragraphs back to original state after mouseover
+                $("p").mouseout(function(){
+                    $(this).css("background-color","");
+                });
+                
+                // events to change input text boxes
+                $("input").focus(function(){
+                    $(this).css("background-color","#e0c844");
+                });
+                
+                $("input").blur(function(){
+                    $(this).css("background-color","white");
+                });
+                
+                $("input").keyup(function(){
+                    $(this).css("background-color","#f7d6d6"); // change when user types input
+                });
+                
+                $("#submit").click(function(){
+                    $("#input").css("background-color","white"); // change when user submits input
+                    $("#input").val("");
+                });
+              });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animation</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+                height: 100px;
+                width: 100px;
+                position: relative;
+                animation: myanimation 3s;
+            }
+            /*@keyframes myanimation {
+                from{background: green}
+                to{background: #3A5795}
+            }*/
+            @keyframes myanimation{
+              0%  {background: red; left: 0px; top: 0px;}
+              25% {background: yellow; left: 200px; top: 0px;}
+              50% {background: blue: left 200px; top: 200px;}
+              75% {background: green; left: 0px; top: 200px;}
+              100%  {background: red; left: 0px; top: 0px;}
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+                height: 100px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+                height: 100px;
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook</span></p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple</p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft</p>
+        </div>
+    </body>
+</html>

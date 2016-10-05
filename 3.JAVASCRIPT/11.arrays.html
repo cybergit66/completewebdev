@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>arrays</title>
+    </head>
+    <body>
+    <p id="myParagraph">JavaScript</p>
+    <script>
+//        var shoppingList = ["bread","eggs","milk"];
+        var shoppingList = new Array("bread", "eggs", "milk")
+        /*document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList;
+        document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[0];
+        document.getElementById("myParagraph").innerHTML += "<br />" + shoppingList[2];*/
+        showResults(shoppingList);
+        showResults(shoppingList[0]);
+        showResults(shoppingList[2]);
+        function showResults(x){
+            document.getElementById("myParagraph").innerHTML += "<br />" + x;
+        }
+        shoppingList[1] = "yogurt";
+        showResults(shoppingList);
+        shoppingList[2] = "orange";
+        showResults(shoppingList);
+        delete shoppingList[1];
+        showResults(shoppingList);
+//        window.alert(shoppingList[1]);
+        shoppingList[1] = "yogurt";
+        showResults(shoppingList);
+        shoppingList.splice(1,1);
+        showResults(shoppingList);
+        shoppingList.splice(1,0,"banana","apple");
+        showResults(shoppingList);
+        shoppingList.sort();
+        showResults(shoppingList);
+        shoppingList.reverse();
+        showResults(shoppingList);
+        var myString = 'ABCD';
+        var myArray = myString.split();
+        showResults(myArray);
+        var myArray = myString.split('');
+        showResults(myArray);
+        var newString = 'what is weather like?';
+        var newArray = newString.split('');
+        showResults(newArray);
+    </script>
+    </body>
+</html>

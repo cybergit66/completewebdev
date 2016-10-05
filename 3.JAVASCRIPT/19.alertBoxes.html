@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Alert boxes</title>
+    </head>
+    <body>
+        <p>JavaScript.</p>
+        <script>
+//            window.alert("Welcome to my page");
+            var acceptCookies = window.confirm("Please confirm you accept cookies");
+//            window.alert(acceptCookies);
+            if(acceptCookies == true){
+                window.alert("You confirmed you accept cookies");
+            } else {
+                window.alert("You do not accept cookies");
+            }
+            
+            var visitor = prompt("Please enter your name.");
+            window.alert("Hi " + visitor + ", thank you for coming to this page. Don't forget to like us on Facebook.");
+        </script>
+    </body>
+</html>

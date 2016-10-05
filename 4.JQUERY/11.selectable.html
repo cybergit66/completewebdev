@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+                 height: 150px;           /*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+                height: auto;
+                width: auto;
+                padding: 10px;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+                height: auto;        /*                height: 200px;*/
+                width: auto;
+                
+            }
+            .great {
+                background-color: #6a37ae
+            }
+            
+            li {
+                font-size: 2em;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+            
+            #list .ui-selecting {
+                background: #740da0;
+            }
+            
+            #list .ui-selected {
+                background: #953ebb;
+                color: white;
+            }
+        </style>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/blitzer/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <button id="changeFacebook">Change facebook text</button>
+        <button id="changeApple">Change apple text</button>
+        <button id="changeInput">Change input Value</button>
+        <button id="changeMicrosoft">Change Microsoft</button>
+        <button id="addText">Add Text</button>
+        <div id="facebook" class="bluebox">
+            <p>Facebook is <span id="great">great</span></p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <ul id="list">
+                <li class="ui-state-default">Audi</li>
+                <li class="ui-state-default">Lexus</li>
+                <li class="ui-state-default">Toyota</li>
+            </ul>
+        </div>
+        <div class="greenbox" id="microsoft">
+            <p id="microsoftText">Microsoft</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a></p>
+        </div>
+        <p>Enter you name : <input></p>
+        
+        <script>
+            $("#list").selectable({
+                stop: function(){
+                    $(".ui-selected").each(function(){
+                        $('<p></p>').text($(this).text()).appendTo("#microsoft");
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

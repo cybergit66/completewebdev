@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Introduction</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        #deviceSize {
+            margin-bottom: 30px;
+        }  
+        #myGrey {
+            background-color: lightgrey;
+            height: 200px;
+        }
+        #myGreen {
+            background-color: lightgreen;
+            height: 200px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div id="deviceSize">Device Size:</div>
+        <div id="myGrey" class="col-md-8 col-sm-6 col-xs-3 col-lg-4">col-md-8 col-sm-6 col-xs-3 col-lg-4</div>
+        <div id="myGreen" class="col-md-4 col-sm-6 col-xs-9 col-lg-8">col-md-4 col-sm-6 col-xs-9 col-lg-8</div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $( window ).resize(function() {
+                var windowWidth = $(window).width();
+                if(windowWidth<768){
+                        $('#deviceSize').text('Device Size: ' +
+                        windowWidth + 'px - Extra small devices (Phones)');
+                    }
+                    else if(windowWidth<992){
+                        $('#deviceSize').text('Device Size: ' +
+                        windowWidth + 'px - Small devices (Tablets)');
+                    }
+                    else if(windowWidth<1200){
+                        $('#deviceSize').text('Device Size: ' +
+                        windowWidth + 'px - Medium devices (Desktops)');
+                    }else{
+                        $('#deviceSize').text('Device Size: ' +
+                        windowWidth + 'px - Large devices (Desktops)');
+                    }
+                }
+            );
+        });
+    </script>
+</body>
+</html>

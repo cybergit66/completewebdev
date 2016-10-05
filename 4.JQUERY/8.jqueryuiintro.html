@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+                 height: 150px;           /*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+                height: 150px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+                height: 150px;        /*                height: 200px;*/
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+        </style>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/blitzer/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="facebook" class="bluebox ui-corner-all">
+            <p>Facebook is <span id="great">great</span></p>
+        </div>
+        <div class="yellowbox ui-corner-all" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftText">Microsoft</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a></p>
+        </div>
+       
+        <div class="ui-state-error" style="height:100px;margin-top:20px">
+            <p>Error Message</p>
+        </div>
+        
+        <script>
+            $("#facebook").draggable();
+        </script>
+    </body>
+</html>

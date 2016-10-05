@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <p>STring: <span id="string"></span></p>
+        <p>Pattern: <span id="pattern"></span></p>
+        <p>Result(search): <span id="search"></span></p>
+        <p>Result(match): <span id="match"></span></p>
+        <p>Result(test): <span id="test"></span></p>
+    <script>
+       var str = "At \nlanta57837 \n5%";
+        /* var pattern = /[a-z]/g;
+        var pattern = /[^atn]/g;
+        var pattern = /[4-7]/g;
+        var pattern = /\d/g;*/
+//        var pattern = /\w/g;
+//      var pattern = new RegExp("a","g");
+//        var pattern = /\W/g;
+//        var pattern = /\s/g;
+//        var pattern = /\d{4}/g;
+//        var pattern = /^A/g;
+        var pattern = /\n/g;
+        document.getElementById("string").innerHTML = str;
+        document.getElementById("pattern").innerHTML = pattern;
+        document.getElementById("search").innerHTML = str.search(pattern);
+        document.getElementById("match").innerHTML = str.match(pattern);
+        document.getElementById("test").innerHTML = pattern.test(str);
+    </script>
+    </body>
+</html>

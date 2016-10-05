@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+                 height: 150px;           /*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+                height: 150px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+                height: auto;        /*                height: 200px;*/
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button id="changeFacebook">Change facebook text</button>
+        <button id="changeApple">Change apple text</button>
+        <button id="changeInput">Change input Value</button>
+        <button id="changeMicrosoft">Change Microsoft</button>
+        <button id="addText">Add Text</button>
+        <div id="facebook" class="bluebox">
+            <p>Facebook is <span id="great">great</span></p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <p>Apple</p>
+        </div>
+        <div class="greenbox" id="microsoft">
+            <p id="microsoftText">Microsoft</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a></p>
+        </div>
+        <p>Enter you name : <input></p>
+        
+        <script>
+            $(function(){
+                $("#changeFacebook").click(function(){
+                        $("#facebook").text("This is facebook.");
+                    });
+            });
+            $(function(){
+                $("#changeApple").click(function(){
+                        $("#apple").html("<p>This is Apple</p><p>New IOS available</p>");
+                    });
+            });
+            $(function(){
+                $("#changeInput").click(function(){
+                        $("input").val("Sam is bad");
+                    });
+            });
+            $("#changeMicrosoft").click(function(){
+                $("#microsoftLink").attr({"href" : "http://www.google.com", "title" : "Google"});
+            });
+//            $("#addText").click(function(){
+//                $("#microsoft").append("<ul><li>BMW</li><li>Audi</li><li>Mercedes</li></ul>");
+//            });
+//            $("#addText").click(function(){
+//                $("#microsoft").prepend("<ul><li>BMW</li><li>Audi</li><li>Mercedes</li></ul>");
+//            });
+            $("#microsoftText").after("<p>New Microsoft Paragraph</p>");
+        </script>
+    </body>
+</html>

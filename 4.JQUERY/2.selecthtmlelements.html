@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+/*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+/*                height: 200px;*/
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+/*                height: 200px;*/
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Facebook is <span id="great">great</span></p>
+            <p class="orange">Paragraph 2</p>
+            <p>Paragraph 3</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple</p>
+            <ul>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>BMW</li>
+            </ul>
+            <p><a href="http://www.google.com">This is a link</a></p>
+            <p><a href="http://www.microsoft.com">This is another link</a></p>
+        </div>
+        <div class="greenbox">
+            <p>Microsoft</p>
+            <ul>
+                <li>Audi</li>
+                <li>Mercedes</li>
+                <li>BMW</li>
+            </ul>
+            <table>
+                <tr><th>Phone Make</th><th>Model</th><th>Model</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+                <tr><td>Apple</td><td>Iphone4</td><th>16Go</th></tr>
+            </table>
+            <p>Type our Name: <input><button type="submit">Submit</button></p>
+        </div>
+        <p>a paragraph</p>
+        <script>
+            $(function(){
+                // jquery selectors. See https://api.jquery.com/category/selectors/
+                
+                $("*").css("font-size", '30px'); // select all elements and assign font-size 30px
+                
+//                $("p").css("text-align", "center");
+//                $("div > p").css("text-align","center");
+//                $("div ~ p").css("text-align", "center");
+                $("div  p").css("text-align", "center"); // select each div paragraph and center
+                
+                $("#great").css("background-color","#63ed30"); // select element with id 'great' and give background color of #63ed30
+                $(".orange").css("background-color","orange"); // select class orange and give background color of orange
+                $("div.bluebox").css("font-family","sans-serif"); // select the div with class bluebox and style font with sans-serif
+                
+                $("p:first-child, p:last-child").css("text-decoration","underline"); // underline the first in last paragraph
+                
+                $("[href]").css("color","red"); // select all hrefs and color them red
+                
+                $("li:first-child, li:last-child").css("background-color","#bbf362"); // give background color to every first,last child in each ul
+                
+                // select elements inside table 
+                $("tr:even").css("background-color","#e1d446"); // select all even rows and assign background color #e1d446
+                $("tr:odd").css("background-color","#811c90"); // select all even rows and assign background color #811c90
+                
+                $(":input").css("background-color","#1da492");
+                $(":submit").css("background-color","purple");
+                
+                $("div:has(table)").css("background-color","lightblue"); // select the divs with a table and assign background color lightblue to div
+            })
+        </script>
+    </body>
+</html>

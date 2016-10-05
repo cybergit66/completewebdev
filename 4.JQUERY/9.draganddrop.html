@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+                 height: 150px;           /*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+                height: 150px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+                height: 150px;        /*                height: 200px;*/
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+            
+            #droppable {
+                background-color: #b513eb;
+                height: 300px;
+                width: auto;
+                margin-top: 20px;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/blitzer/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="facebook" class="bluebox ui-corner-all">
+            <p>Facebook is <span id="great">great</span></p>
+        </div>
+        <div class="yellowbox ui-corner-all" id="apple">
+            <ul id="breakfast">
+                <li>eggs</li>
+                <li>milk</li>
+                <li>bread</li>
+            </ul>
+        </div>
+        <div class="greenbox ui-corner-all" id="microsoft">
+            <p id="microsoftText">Microsoft</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a></p>
+        </div>
+        
+        <div id="droppable"  class="ui-corner-all"><div>You can drop elements inside of this container</div></div>
+        <script>
+            var message = ["Hold me","feed me","Teach me","Leave me","Drop me","come over"];
+            $("#facebook").draggable();
+            $("#apple").draggable({
+                axis: "y"
+            });
+            $("#microsoft").draggable({
+                revert: true,
+                start: function(){
+                    $("#facebook").css("background-color","#43c8d4")
+                },
+                drag: function(){
+                    $("#microsoft").css("background-color",'rgb(' + Math.floor(256*Math.random()) + ',' + 
+                Math.floor(256*Math.random()) + ',' + 
+                Math.floor(256*Math.random()) + ')');
+                    $("#microsoft").find("p").html(message[Math.floor(Math.random()*4)]);
+                },
+                stop: function(){
+                    $("#apple").css("background-color","#b1e269");
+                    $("#microsoft").html('<p>Finally</p>')
+                }
+            });
+            $("#droppable").droppable({
+                drop: function(event, ui){
+                    $(this).css("background-color","#21dd85");
+                    $(this).find("p").remove();
+                    $("<li></li>").text(ui.draggable.text()).appendTo(this);
+                },
+                accept: "#breakfast li"
+            });
+            $("#breakfast").find("li").draggable({
+                helper: "clone",
+                appendTo: "body"
+            });
+        </script>
+    </body>
+</html>

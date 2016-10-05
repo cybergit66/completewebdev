@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--https://api.jquery.com/category/selectors/-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>internal css</title>
+        <style>
+            .bluebox {
+                background-color: #3B5998;
+                color: white;
+                 height: 150px;           /*                height: 200px;*/
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(226, 242, 7);
+                color: black;
+                height: auto;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #68c473;
+                color: black;
+                height: 150px;        /*                height: 200px;*/
+                width: auto;
+            }
+            .great {
+                background-color: #6a37ae
+            }
+            
+            
+        </style>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/cupertino/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <button id="changeFacebook">Change facebook text</button>
+        <button id="changeApple">Change apple text</button>
+        <button id="changeInput">Change input Value</button>
+        <button id="changeMicrosoft">Change Microsoft</button>
+        <button id="addText">Add Text</button>
+        
+        <div id="facebook" class="bluebox">
+            <label for="myInput">Enter a Value</label>
+            <p><input id="myInput" name="myInput" value="30" title="Please enter a value"></p>
+        </div>
+        
+        <div class="yellowbox" id="apple">
+            <ul>
+                <li><a href="#tab1">Tab 1</a></li>
+                <li><a href="#tab2">Tab 2</a></li>
+                <li><a href="#tab3">Tab 3</a></li>
+            </ul>
+            <div id="tab1"><p>Content 1</p></div>
+            <div id="tab2"><p>Content 2</p></div>
+            <div id="tab3"><p>Content 3</p></div>
+        </div>
+        
+        
+        <div class="greenbox" id="microsoft" title="Microsoft Corporation">
+            <p id="microsoftText">Microsoft</p>
+            <p><a href="http://www.microsoft.com" title="microsoft" id="microsoftLink">Microsoft</a></p>
+        </div>
+        <p>Enter you name : <input></p>
+        
+        <script>
+            $(function(){
+                $("#myInput").spinner({
+                    min: 0,
+                    max: 100,
+                    step: 3
+                });
+                
+                $("#apple").tabs({
+                    collapsible: true,
+                    event: "mouseover"
+                });
+                
+                $("#apple").tabs().find(".ui-tabs-nav").sortable({
+                    axis: "x"
+                });
+                
+                $(document).tooltip();
+                
+//                $("#myInput").tooltip({
+//                    show: {effect: "explode"}
+//                });
+            })
+        </script>
+    </body>
+</html>

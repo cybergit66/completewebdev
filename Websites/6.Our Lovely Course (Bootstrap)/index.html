@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Our Lovely Course</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--    custom styling-->
+      <link href="css/style.css" rel="stylesheet">
+<!--      Google font-->
+      <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  </head>
+  <body>
+<!--      add video to the body element-->
+  <video autoplay loop muted id="bgVideo">
+    <source src="video/free_nature_video_background_004_1920x1080_30fps.mp4" type="video/mp4">
+  </video>
+<!--      create collapsible navigation bar with scrollspy-->
+    <nav role="navigation" class="navbar navbar-custom navbar-fixed-top" id="myNavbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Highsmith Marketing Services</a>
+                <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#promise">Our Promise</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--      create the home section with title, goal, and join us button-->
+      <div id="home" class="jumbotron">
+        <div class="container">
+            <h1>Complete Marketing Services</h1>  
+            <h2>Increase Your Revenue in a Matter of Weeks!</h2>
+            <p><a class="btn" href="#">Get Started Now!</a></p>
+        </div>
+      </div>
+<!--      create about section showing course detail using grid system-->
+      <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/rating_stars.png" class="about-image">
+                    <h2>High Quality Lectures</h2>
+                    <p>Ut a congue felis. Etiam placerat commodo est ut porta. Ut rutrum consequat lectus, eget euismod mi imperdiet et. Sed porta lorem sed pulvinar posuere.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/tools.png" class="about-image">
+                    <h2>+80H of Rich Content</h2>
+                    <p>Quisque lacus enim, porttitor sed maximus nec, suscipit quis tellus. Integer vel ipsum id lorem blandit imperdiet a vel nulla.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/help.png" class="about-image">
+                    <h2>Get Help Anytime</h2>
+                    <p>Ut a congue felis. Etiam placerat commodo est ut porta. Ut rutrum consequat lectus, eget euismod mi imperdiet et. Sed porta lorem sed pulvinar posuere.</p>
+                </div>
+            </div>  
+        </div>
+      </div>
+<!--      create carousel-->
+      
+<!--      create footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

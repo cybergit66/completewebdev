@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Introduction</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <h1>We are learning bootstrap</h1>
+        
+        <a class="btn btn-primary" href="#collapse1" data-toggle="collapse">Link</a>
+        <button class="btn btn-primary" data-target="#collapse2" data-toggle="collapse">Button</button>
+        
+        <div class="bg-danger collapse" id="collapse1">
+            <p>Collapsible content goes here</p>
+            <p>Collapsible content goes here</p>
+            <p>Collapsible content goes here</p>
+        </div>
+        
+        <div class="bg-warning collapse" id="collapse2">
+            <p>Collapsible content goes here</p>
+            <p>Collapsible content goes here</p>
+            <p>Collapsible content goes here</p>
+        </div>
+        <br /><br />
+        
+        <div id="accordion" class="panel-group">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#collapse3" data-toggle="collapse" data-parent="#accordion">Section 1</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="collapse3">
+                    <div class="panel-body">
+                        <p>Collapsible content goes here</p>
+                        <p>Collapsible content goes here</p>
+                        <p>Collapsible content goes here</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#collapse4" data-toggle="collapse" data-parent="#accordion">Section 2</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" id="collapse4">
+                    <div class="panel-body">
+                        <p>Collapsible content goes here</p>
+                        <p>Collapsible content goes here</p>
+                        <p>Collapsible content goes here</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#collapse5" data-toggle="collapse" data-parent="#accordion">Section 3</a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" id="collapse5">
+                    <div class="panel-body">
+                        <p>Collapsible content goes here</p>
+                        <p>Collapsible content goes here</p>
+                        <p>Collapsible content goes here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+      <script>
+        $(function(){
+            $('#collapse4').collapse('show');
+            $('#collapse5').collapse('toggle');
+            $('#collapse3').on('hidden.bs.collapse', function(){
+                window.alert('Section 1 is hidden');
+            });
+        });
+      </script>
+  </body>
+</html>

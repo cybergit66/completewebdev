@@ -1,0 +1,133 @@
+/*style the body element by adding the background image and set to cover and add font family to body element*/
+body {
+    background: url(http://freenaturestock.s3.amazonaws.com/638.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arvo, serif;
+}
+
+/*style brand image*/
+.crown {
+    height: 30px;
+    padding-right: 30px;
+}
+
+/*style navigation bar using css*/
+.navbar-inverse {
+    opacity: .7;
+}
+
+/*
+.ul-custom {
+    height: 65px;
+    padding: 9px;
+}
+*/
+
+ul.nav li {
+    margin-right: 30px;
+    padding: 10px 0;
+    font-size: 17px;
+}
+
+ul.nav li:hover {
+    border-bottom: 1px solid #00FFB8;
+    padding-bottom: 9px;
+    cursor: pointer;
+}
+
+ul.nav a {
+    color: #fff !important;
+}
+
+.current-link a{
+    color: #16f36a !important;
+}
+
+/*style the jumbotron*/
+.page-header {
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 2.5px;
+    border-bottom: none !important;
+}
+
+/*
+.jumbotron{
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    letter-spacing: 2.5px;
+}
+*/
+
+/*limit the width of the icon section*/
+#iconSection {
+  /*width: 900px !important;*/
+  margin: auto;
+}
+
+/*style icons section using bootstrap grid*/
+.my-icons {
+  height: 100px !important;
+}
+
+.thumbnail {
+  background: rgba(0, 0, 0, .0);
+  border: none;
+}
+
+.caption {
+  color: #fff !important;
+  text-align: center;
+}
+/*style the contact button*/
+.my-button {
+  width: 300px;
+  margin: auto;
+}
+
+.my-button .btn {
+    width: 100%;
+    background-color: rgba(0, 255, 184, 0.4);
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2.3px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 70px;
+/*    opacity: .7;*/
+}
+/*style the footer*/
+.footer {
+    background-color: rgba(0, 0, 0 .5);
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px 0;
+}
+
+/*use media queries to adjust to various devices*/
+@media (max-width: 320px) {
+    .page-header {
+      font-size: 50px;
+    }
+    
+    .footer {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+      font-size: 40px;
+    }
+    
+    .my-icons {
+        height: 70px !important;
+    }
+}

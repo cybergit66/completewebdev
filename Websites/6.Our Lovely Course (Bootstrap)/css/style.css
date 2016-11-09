@@ -100,9 +100,27 @@ Connection graphic by <a href="http://www.flaticon.com/authors/freepik">Freepik<
 /*
 style the promise section
 -add padding-top for early activation of the nav link
+
 -set the width of the carousel and center it
 -set the height of pictures and center them inside the carousel items
 -move the carousel caption under the pictures*/
+#promise {
+    padding-top: 100px;
+}
+
+#myCarousel{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    text-align: center;
+    height: 150px;
+}
 
 /*style the pictures and nav-brand for different screens*/
 

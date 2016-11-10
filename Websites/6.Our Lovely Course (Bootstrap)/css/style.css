@@ -10,16 +10,26 @@ body {
 set the video as background, make it fixed
 make sure the video is behind all elements
 make the video spread across the whole webpage*/
-
-/*
-video will not work on smaller devices
--hide video and set picture as baackground using media queries
--make it spread across the whole page*/
 video#bgVideo {
     position: fixed;
     min-height: 100%;
     min-width: 100%;
     z-index: -100;
+}
+/*
+video will not work on smaller devices
+-hide video and set picture as baackground using media queries
+-make it spread across the whole page*/
+
+
+@media (max-width:768px){
+    body{
+        background: url(https://static.pexels.com/photos/9149/pexels-photo-large.jpeg) center center fixed;
+        background-size: cover;
+    }
+    #bgVideo{
+        display: none;
+    }
 }
 
 /*
@@ -123,7 +133,26 @@ style the promise section
 }
 
 /*style the pictures and nav-brand for different screens*/
+@media (max-width:768px){
+    .carousel-inner .item img{
+        height: 300px;
+    }
+    .carousel-inner .item h2{
+        font-size: 23px;
+    }
+}
 
+@media (max-width:400px){
+    .carousel-inner .item img{
+        height: 200px;
+    }
+    .carousel-inner .item h2{
+        font-size: 17px;
+    }
+    .navbar-custom .navbar-brand{
+        font-size: 12px;
+    }
+}
 /*style the footer*/
 
 /*style the navigation bar using a navbar css generator - http://twitterbootstrap3navbars.w3masters.nl/ */ 

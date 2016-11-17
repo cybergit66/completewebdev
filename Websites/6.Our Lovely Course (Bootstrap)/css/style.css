@@ -4,6 +4,7 @@ give the body element a  relative position for the scrollspy to work
 add font family to the whole page*/
 body {
     font-family: Vollkorn, sans-serif;
+    position: relative;
 }
 
 /* video
@@ -142,7 +143,7 @@ style the promise section
     }
 }
 
-@media (max-width:400px){
+@media (max-device-width:400px){
     .carousel-inner .item img{
         height: 200px;
     }
@@ -154,6 +155,13 @@ style the promise section
     }
 }
 /*style the footer*/
+.footer {
+    background-color: rgba(29,167,179,0.1);
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 150px;
+    font-size: 15px;
+}
 
 /*style the navigation bar using a navbar css generator - http://twitterbootstrap3navbars.w3masters.nl/ */ 
 

@@ -1,0 +1,67 @@
+body {
+    background: url("/img/landscape-1802337_1920.jpg") no-repeat fixed center;
+    background-size: cover;
+    color: #fff
+}
+
+/*title*/
+#header {
+    text-align: center;
+    font-size: 7vw;
+}
+
+/*lap*/
+#lap {
+    text-align: right;
+    font-size: 4vw;
+}
+
+/*time*/
+#time {
+    text-align: center;
+    font-size: 10vw;
+}
+
+/*buttons*/
+#controlContainer {
+    margin-bottom: 100px;
+}
+
+.control {
+    color: #fff;
+    background-color: #d7a04e;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
+    text-align: center;
+    padding: 20% 0;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+.control:active {
+    background-color: #fff;
+    color: #d7a04e;
+}
+
+/*laps*/
+#laps {
+    max-height: 270px;
+    overflow-y: scroll;
+}
+
+.lap {
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    margin: 15px;
+}
+
+.lap-time-title{
+    font-size: 1.5em;
+    float: left;
+}
+
+.lap-time {
+    font-size: 2em;
+    float: right;
+}

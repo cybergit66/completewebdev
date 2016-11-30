@@ -65,6 +65,11 @@ body {
     margin: 10px auto;
 }
 
+#paint {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
 /*input container*/
 .input-container2 {
     width: 399px;
@@ -103,4 +108,9 @@ body {
 
 .button:active{
     top: 4px;
+}
+
+.erasemode {
+    background-color: red;
+    color: #fff;
 }

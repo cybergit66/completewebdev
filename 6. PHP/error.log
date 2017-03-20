@@ -1,0 +1,8 @@
+Error[512] on 03/20/2017 16:29:55
+Details: nonexistentfile.txt does not exist and thus size cannot be retrieved!. 
+Location: In /home/terencet/public_html/PHP/28.errorhandling.php on line 48. 
+Variables: Array
+(
+    [file] => nonexistentfile.txt
+)
+

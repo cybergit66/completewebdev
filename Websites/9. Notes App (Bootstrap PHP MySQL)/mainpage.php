@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Online Notes</title>
+    <title>My Notes</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,6 +13,36 @@
     <link href="styling.css" rel="stylesheet">
 <!--arvo font-->
       <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+<!--      custom styling -->
+      <style>
+          #container {
+              margin-top: 120px;
+          }
+          
+          .container {
+              margin-top: 120px;
+          }
+          
+          #allNotes, #done{
+              display: none;
+          }
+          
+          .buttons{
+              margin-bottom: 20px;
+          }
+          
+          textarea{
+              width: 100%;
+              max-width: 100%;
+              font-size: 16px;
+              line-height: 1.5em;
+              border-left-width: 20px;
+              border-color: #62aacf;;
+              color: darkblue;
+              background-color: #fbefff;
+              padding: 10px;
+          }
+      </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,24 +65,37 @@
             </div>
             <div id="navbarCollapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="#">My Notes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#loginModal" data-toggle="modal">Login</a></li>
+                    <li><a href="#">Logged in as <b>username</b></a></li>
+                    <li><a href="#">Log out</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<!--    Jumbotron with Sign up button-->
-    <div id="myContainer" class="jumbotron">
-      <h1>Online Notes App</h1>
-        <p>Your notes with you wherever you go</p>
-        <p>Easy to use, protect all your notes</p>
-        <button type="button" class="btn btn-lg green signup" data-target="#signupModal" data-toggle="modal">Sign Up - It's Free!</button>
+<!--Container-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset3 col-md-6">
+                <div class="buttons">
+                    <button id="addNote" type="button" class="btn btn-info btn-lg">Add Note</button>
+                    <button id="editNote" type="button" class="btn btn-info btn-lg pull-right">Edit</button>
+                    <button id="done" type="button" class="btn green btn-lg pull-right">Done</button>
+                    <button id="allNotes" type="button" class="btn btn-info btn-lg">All Notes</button>
+                </div>
+                <div id="notePad">
+                    <textarea rows="10"></textarea>
+                </div>
+                <div id="notes" class="notes">
+<!--                ajax call to php file-->
+                </div>
+            </div>
+        </div>
     </div>
-    
 <!--    Login Form-->
       <form method="post" id="loginForm">
         <!--        the modal-->
@@ -175,7 +218,7 @@
 <!--      end forgot password form-->
 <!--      Footer-->
     <div class="footer">
-        <div class="container">
+        <div id="container" class="container">
             <p>Terence Highsmith Copyright &copy; 2016-<?php $today = date("Y"); echo $today;?>.</p>
         </div>
     </div>

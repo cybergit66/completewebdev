@@ -1,11 +1,42 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
 /*background image*/
 body{
+    font-family: Arvo, serif;
     background: url("img/notebook2.jpg") no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
 }
+/*Jumbotron*/
+.jumbotron{
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: 2.5px;
+    padding: 10px;
+    margin-top: 150px;
+}
+/*buttons*/
+.signup{
+    margin-top: 50px;
+}
+.green{
+    background-color: rgba(114,190,35,0.8);
+}
+.green:hover{
+    background-color: rgb(114,190,35);
+}
+/*style the footer*/
+.footer{
+    position: absolute !important;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}
 /*navigation bar*/
-.navbar-custom {
+.navbar-custom, .footer {
   background-color: #62aacf;
   border-color: #499cc7;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#89bfdb), to(#62aacf));

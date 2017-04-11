@@ -112,20 +112,20 @@
                         <div id="signupMessage"></div>
 <!--                        end signup message from php file-->
                         <div class="form-group">
-                            <label for="Username" class="sr-only">Username</label>
-                            <input  id="Username" class="form-control" type="text" name="username" placeholder="Username" maxlength="30">
+                            <label for="username" class="sr-only">Username</label>
+                            <input  id="username" class="form-control" type="text" name="username" placeholder="username" maxlength="30">
                         </div>
                         <div class="form-group">
-                            <label for="Email" class="sr-only">Email</label>
-                            <input  id="Email" class="form-control" type="email" name="email" placeholder="Email" maxlength="50">
+                            <label for="email" class="sr-only">Email</label>
+                            <input  id="email" class="form-control" type="email" name="email" placeholder="Email" maxlength="50">
                         </div>
                         <div class="form-group">
-                            <label for="Password" class="sr-only">Password</label>
-                            <input  id="Password" class="form-control" type="password" name="password" placeholder="Choose a password" maxlength="30">
+                            <label for="password" class="sr-only">Password</label>
+                            <input  id="password" class="form-control" type="password" name="password" placeholder="Choose a password" maxlength="30">
                         </div>
                         <div class="form-group">
-                            <label for="Password2" class="sr-only">Confirm Password</label>
-                            <input  id="Password2" class="form-control" type="password" name="password2" placeholder="Confirm password" maxlength="30">
+                            <label for="password2" class="sr-only">Confirm Password</label>
+                            <input  id="password2" class="form-control" type="password" name="password2" placeholder="Confirm password" maxlength="30">
                         </div>
                     </div>
 <!--                    modal footer-->
@@ -184,5 +184,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -57,11 +57,13 @@ if($errors){
 $username = mysqli_real_escape_string($link, $username);
 $email = mysqli_real_escape_string($link, $email);
 $password = mysqli_real_escape_string($link, $password);
+$password = hash('sha256',$password);
 //    <!--if username exists in the users table print error-->
-$sql = "SELECT * FROM 'users' WHERE username = '$username'";
+$sql = "SELECT * FROM users WHERE username = '$username'";
 $result = mysqli_query($link, $sql);
 if(!$result){
     echo '<div class="alert alert-danger">Error running the query!</div>';
+    echo '<div class="alert alert-danger">' . mysqli_error($link) . '</div>';
     exit;
 }
 $results = mysqli_num_rows($result);
@@ -71,7 +73,7 @@ if($results){
 }
 //    <!--else-->
 //        <!--if email exists in the users table print error-->
-$sql = "SELECT * FROM 'users' WHERE username = '$email'";
+$sql = "SELECT * FROM users WHERE email = '$email'";
 $result = mysqli_query($link, $sql);
 if(!$result){
     echo '<div class="alert alert-danger">Error running the query!</div>';
@@ -84,6 +86,22 @@ if($results){
 }
 //        <!--else-->
 //            <!--create a unique activation code-->
+$activationKey = bin2hex(openssl_random_pseudo_bytes(16));
+    //bytes: unit of data = 8bits
+    //bit: 0 or 1
+    // 16 bytes = 16 * 8 = 128bits
+    // 32 characters
 //            <!--insert user details and activation code in the users table-->
+$sql = "INSERT INTO users (`username`, `email`, `password`, `activation`) VALUES ('$username', '$email', '$password', '$activationKey')";
+$result = mysqli_query($link, $sql);
+if(!$result){
+    echo '<div class="alert alert-danger">Error inserting the user</div>';
+    exit;
+}
 //            <!--send the user an email with a link to activate.php with their email and activation code-->
+$message = "Please click on this link to activate your account:\n\n";
+$message .= "http://terence.thecompletewebhosting.com/9.%20Notes%20App%20%28Bootstrap%20PHP%20MySQL%29/activate.php?email=" . urlencode($email) . "&key=$activationKey";
+if(mail($email, 'Confirm your registration', $message, 'From:' . 'notes.com')){
+    echo "<div class='alert alert-success'>Thank you for registering! A confirmation email has been sent to $email. Please click on the activation link to activate your account.</div>";
+}
 ?>

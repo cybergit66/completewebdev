@@ -1,9 +1,3 @@
-<?php
-session_start();
-if(!isset($_SESSION['user_id'])){
-    header("location: index.php");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,15 +15,13 @@ if(!isset($_SESSION['user_id'])){
       <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 <!--      custom styling -->
       <style>
-          #noteButtons {
+          #container {
               margin-top: 120px;
           }
           
-/*
           .container {
               margin-top: 120px;
           }
-*/
           
           #allNotes, #done{
               display: none;
@@ -37,9 +29,6 @@ if(!isset($_SESSION['user_id'])){
           
           .buttons{
               margin-bottom: 20px;
-          }
-          #notePad{
-              display: none;
           }
           
           textarea{
@@ -83,7 +72,7 @@ if(!isset($_SESSION['user_id'])){
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Logged in as <b>username</b></a></li>
-                    <li><a href="index.php?logout=1">Log out</a></li>
+                    <li><a href="#">Log out</a></li>
                 </ul>
             </div>
         </div>
@@ -91,7 +80,7 @@ if(!isset($_SESSION['user_id'])){
 <!--Container-->
     <div class="container">
         <div class="row">
-            <div id="noteButtons" class="col-md-offset3 col-md-6">
+            <div class="col-md-offset3 col-md-6">
                 <div class="buttons">
                     <button id="addNote" type="button" class="btn btn-info btn-lg">Add Note</button>
                     <button id="editNote" type="button" class="btn btn-info btn-lg pull-right">Edit</button>
@@ -119,6 +108,5 @@ if(!isset($_SESSION['user_id'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-      <script src="notes.js"></script>
   </body>
 </html>

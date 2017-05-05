@@ -1,3 +1,13 @@
+<?php
+session_start();
+include('connection.php');
+//
+//logout
+include('logout.php');
+//
+//remember me check
+include('remember.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,17 +78,17 @@
                     <div class="modal-body">
 <!--                        login message from PHP file-->
                         <div id="loginMessage"></div>
-<!--                        end signup message from php file-->
+<!--                        end login message from php file-->
                         <div class="form-group">
-                            <label for="loginEmail" class="sr-only">Login Email</label>
-                            <input  id="loginEmail" class="form-control" type="email" name="loginemail" placeholder="Email" maxlength="50">
+                            <label for="loginemail" class="sr-only">Login Email</label>
+                            <input  id="loginemail" class="form-control" type="email" name="loginemail" placeholder="Email" maxlength="50">
                         </div>
                         <div class="form-group">
-                            <label for="loginPassword" class="sr-only">Login Password</label>
-                            <input  id="loginPassword" class="form-control" type="password" name="loginpassword" placeholder="Enter your password" maxlength="30">
+                            <label for="loginpassword" class="sr-only">Login Password</label>
+                            <input  id="loginpassword" class="form-control" type="password" name="loginpassword" placeholder="Enter your password" maxlength="30">
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" name="rememberme" id="rememberMe">Remember me</label>
+                            <label><input type="checkbox" name="rememberme" id="rememberme">Remember me</label>
                             <a class="pull-right" style="cursor: pointer;" data-target="#forgotPasswordModal" data-toggle="modal" data-dismiss="modal">Forgot password?</a>
                         </div>
                     </div>
@@ -157,8 +167,8 @@
                         <div id="forgotPasswordMessage"></div>
 <!--                        end signup message from php file-->
                         <div class="form-group">
-                            <label for="forgotEmail" class="sr-only">Forgot Email</label>
-                            <input  id="forgotEmail" class="form-control" type="email" name="forgotemail" placeholder="Email" maxlength="50">
+                            <label for="forgotemail" class="sr-only">Forgot Email</label>
+                            <input  id="forgotemail" class="form-control" type="email" name="forgotemail" placeholder="Email" maxlength="50">
                         </div>
                     </div>
 <!--                    modal footer-->
